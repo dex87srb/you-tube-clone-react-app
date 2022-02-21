@@ -1,0 +1,163 @@
+.video-list {
+  padding: 30px 0;
+  list-style: none;
+  width: 560px;
+  margin: 10px;
+  img {
+    margin-right: 20px;
+    height: 130px;
+  }
+  > div {
+    display: flex;
+    padding: 20px;
+    height: 210px;
+    margin-bottom: 20px;
+    background: #fff;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.5);
+    div h3{
+      width: 330px;
+    }
+     div p {
+   overflow:auto;
+   height: 130px;
+   padding-top: 15px;
+    width: 330px;
+  }
+  }
+ 
+}
+
+iframe {
+  height: 0;
+  margin: 30px auto 0;
+  &.visible {
+    height: 600px;
+  }
+}
+
+//Responsive
+@media  screen and (max-width:1220px) {
+  iframe {
+   display: flex;
+   justify-content: center;
+  &.visible {
+    
+    width: 960px;
+  }
+}
+}
+
+@media  screen and (max-width:980px) {
+  iframe {
+  &.visible {
+    
+    width: 768px;
+  }
+}
+}
+
+@media  screen and (max-width:768px) {
+  iframe {
+  &.visible {
+    width: 560px;
+    height: 400px;
+  }
+  .video-list {
+  div{ 
+      div p{
+         width: 340px;
+      }}}
+}
+}
+
+
+@media  screen and (max-width:578px) {
+   iframe {
+  &.visible {
+     width: 100%;
+  }
+}
+  
+  
+  .video-list {
+
+ img {
+   
+    height: 130px;
+    width: 173px;
+  }
+  
+    div{ 
+      display: flex;
+      flex-direction: column;
+       align-items: center;
+      height: 300px;
+      div h3{
+        padding-top: 10px;
+        overflow: auto;
+        width: 380px;
+        text-align: center;
+      }
+      div p{
+        width: 380px;
+        height: 90px;          
+       }
+     }
+    
+  }
+}
+
+@media  screen and (max-width:479px) {
+ 
+.video-list {
+  display: flex;
+  justify-content: center;
+  
+    div{ 
+    
+    width: 380px;
+      div h3{
+        padding-top: 10px;
+        overflow: auto;
+        width: 370px;
+                
+      }
+      div p{
+        overflow:scroll;
+        width: 270px;
+        height: 80px;
+      }
+  }}
+}
+
+@media  screen and (max-width:398px) {
+  iframe {
+  &.visible {
+     width: 390px;
+  }
+}
+.video-list {
+  display: flex;
+ 
+    div{ 
+    
+    width: 390px;
+      div h3{
+        padding-top: 10px;
+        overflow: auto;
+        width: 370px;
+         
+        
+      }
+      div p{
+         overflow: scroll;
+         width: 270px;
+         height: 80px;
+      }
+  }}
+}
+
+.pointer{
+  cursor: pointer;
+}
+
