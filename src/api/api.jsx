@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-export const GetData = (q) => {
+export const getData = (q) => {
 
   const url = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=50&q=${q}&key=${process.env.REACT_APP_KEY}`;
 
