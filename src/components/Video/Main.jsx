@@ -3,7 +3,7 @@ import Pagination from "../Pagination";
 import Header from "../Header/Header";
 import { getDataRelated } from '../../api/ApiRelatedData'
 import { VideoWindow } from "./VideoWindow";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import React from 'react'
 
 const Main = () => {
@@ -39,25 +39,25 @@ const Main = () => {
   }
 
 
-  React.useEffect(() => {
+  const paginate = () => {
 
-    const paginate = () => {
+    if (status === "Related Data") {
 
-      if (status === "Related Data") {
+      searchUpdate.current =
 
-        searchUpdate.current =
+        < Pagination data={dataRelated} pageLimit={5} dataLimit={10} RenderComponent={
+          ListVideos
+        } />
+    }
 
-          < Pagination data={dataRelated} pageLimit={5} dataLimit={10} RenderComponent={
-            ListVideos
-          } />
-      }
+  };
 
-    };
+
+  useEffect(() => {
 
     paginate();
 
   });
-
 
 
   function videoRelated(video) {
